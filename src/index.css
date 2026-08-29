@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+.qs-datepicker-container {
+  border: 1px solid rgb(71 85 105 / 0.7);
+  border-radius: 0.9rem;
+  box-shadow: 0 20px 45px rgb(15 23 42 / 0.45);
+  background: rgb(15 23 42 / 0.98);
+  color: rgb(226 232 240);
+}
+
+.qs-controls {
+  background: rgb(30 41 59 / 0.95);
+}
+
+.qs-month-year {
+  color: rgb(224 231 255);
+  font-weight: 600;
+}
+
+.qs-day {
+  color: rgb(148 163 184);
+}
+
+.qs-square {
+  color: rgb(226 232 240);
+}
+
+.qs-active {
+  background: rgb(99 102 241);
+  color: rgb(255 255 255);
+}
