@@ -6,8 +6,12 @@ import { useEffect, useMemo, useRef, useState } from "react"
 function AgeStat({ label, value }) {
   return (
     <div className="rounded-xl border border-slate-700/70 bg-slate-900/70 p-4 text-center">
-      <p className="text-3xl font-bold tracking-tight text-indigo-300">{value}</p>
-      <p className="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">{label}</p>
+      <p className="text-3xl font-bold tracking-tight text-indigo-300">
+        {value}
+      </p>
+      <p className="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+        {label}
+      </p>
     </div>
   )
 }
@@ -66,12 +70,18 @@ function AgeCalculatorCard() {
       <span className="inline-flex rounded-full border border-indigo-400/40 bg-indigo-500/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-200">
         Date of Birth
       </span>
-      <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">Age Calculator</h1>
+      <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        Age Calculator
+      </h1>
       <p className="mt-2 text-sm text-slate-300 sm:text-base">
-        Pick your birth date to calculate your exact age in years, months, and days.
+        Pick your birth date to calculate your exact age in years, months, and
+        days.
       </p>
 
-      <label className="mt-6 block text-sm font-medium text-slate-200" htmlFor="birth-date">
+      <label
+        className="mt-6 block text-sm font-medium text-slate-200"
+        htmlFor="birth-date"
+      >
         Birth date
       </label>
       <input
@@ -85,7 +95,10 @@ function AgeCalculatorCard() {
       {age ? (
         <div className="mt-6 space-y-4">
           <p className="text-sm text-slate-300">
-            Born on <span className="font-semibold text-slate-100">{birthDate.toFormat("dd LLLL yyyy")}</span>
+            Born on{" "}
+            <span className="font-semibold text-slate-100">
+              {birthDate.toFormat("dd LLLL yyyy")}
+            </span>
           </p>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
             <AgeStat label="Years" value={years} />

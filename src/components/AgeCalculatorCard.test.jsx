@@ -24,7 +24,9 @@ describe("AgeCalculatorCard", () => {
   it("shows guidance before a birth date has been selected", () => {
     render(<AgeCalculatorCard />)
 
-    expect(screen.getByText(/your age breakdown will appear here/i)).toBeInTheDocument()
+    expect(
+      screen.getByText(/your age breakdown will appear here/i),
+    ).toBeInTheDocument()
     expect(datepicker).toHaveBeenCalledOnce()
   })
 
@@ -73,7 +75,9 @@ describe("AgeCalculatorCard", () => {
 
     expect(screen.getByText("10")).toBeInTheDocument()
     expect(datepicker).toHaveBeenCalledTimes(2)
-    expect(datepicker.mock.calls[1][1].maxDate).toEqual(new Date("2026-08-30T00:00:00"))
+    expect(datepicker.mock.calls[1][1].maxDate).toEqual(
+      new Date("2026-08-30T00:00:00"),
+    )
   })
 
   it("cleans up the date picker when unmounted", () => {
